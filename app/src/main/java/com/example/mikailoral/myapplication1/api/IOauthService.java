@@ -5,6 +5,8 @@ package com.example.mikailoral.myapplication1.api;
  */
 
 
+import android.content.Context;
+
 import com.example.mikailoral.myapplication1.api.response.AccessTokenResponse;
 
 import retrofit2.Call;
@@ -16,4 +18,6 @@ public interface IOauthService {
     @FormUrlEncoded
     @POST("auth/oauth/v2/token")
     Call<AccessTokenResponse> getAccessToken(@Field("scope") String scope, @Field("grant_type") String grantType, @Field("client_id") String clientId, @Field("client_secret") String clientSecret);
+
+    public IOauthService sendPush() throws Exception;
 }

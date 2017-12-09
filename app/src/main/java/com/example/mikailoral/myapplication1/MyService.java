@@ -6,11 +6,17 @@ import android.os.IBinder;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.mikailoral.myapplication1.api.response.PushResponse;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.google.gson.Gson;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MyService extends FirebaseMessagingService {
+
 
     public MyService() {
     }
@@ -26,7 +32,17 @@ public class MyService extends FirebaseMessagingService {
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             Log.d("dorlion", "Message data payload: " + remoteMessage.getData());
-/*
+            Map<String, String> map = remoteMessage.getData();
+            String ucret = map.get("detail");
+
+            Log.d("dorlion", ucret);
+            try {
+                MainActivity.MAINACTIVITY_INSTANCE.voiceActivity(ucret);
+            }catch (Exception e){
+
+            }
+
+            /*
             if (/* Check if data needs to be processed by long running job // true) {
                 // For long-running tasks (10 seconds or more) use Firebase Job Dispatcher.
                 scheduleJob();

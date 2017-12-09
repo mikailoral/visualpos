@@ -28,4 +28,20 @@ public class OAuthService {
 
         return retrofit.create(IOauthService.class);
     }
+
+
+    public IOauthService sendPush() throws Exception {
+        OkHttpClient client = APIUtil.sendPush();
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://fcm.googleapis.com/fcm/send")
+                .client(client)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        return retrofit.create(IOauthService.class);
+    }
 }

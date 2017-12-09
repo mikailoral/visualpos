@@ -10,4 +10,12 @@ import java.util.List;
 
 public class GetAccountListResponse {
     List<AccountDto> accountList;
+
+    public List<AccountDto> getAccountList() {
+        return accountList;
+    }
+
+    public void setAccountList(List<AccountDto> accountList) {
+        this.accountList = accountList;
+    }
 }

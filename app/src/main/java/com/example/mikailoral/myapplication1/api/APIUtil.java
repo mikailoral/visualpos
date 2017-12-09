@@ -90,5 +90,31 @@ public class APIUtil {
         return client;
     }
 
+    public static OkHttpClient sendPush() {
+        OkHttpClient client = null;
+
+        try {
+                client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
+                    @Override
+                    public Response intercept(Interceptor.Chain chain) throws IOException {
+                        Request original = chain.request();
+
+                        Request.Builder requestBuilder = original.newBuilder()
+                                .header("Authorization", "key=AAAA7frz3DM:APA91bExKtwj-pefaswEMwS3_y3gMI7nxNhKGi4Oq7dBoYMb99XWBHLRgwxzIYKr6aE2fK8e5wrLaW8U4vgIpNzVlSrvCEyjbo-Q3Uk9_I_BV7kjE051y2Qqp_t-CzdzC_5Cmnm2LFLH")
+                                .header("Content-Type","application/json");
+
+                        Request request = requestBuilder.build();
+                        return chain.proceed(request);
+                    }
+                }).build();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return client;
+    }
+
 
 }
