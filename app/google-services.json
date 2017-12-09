@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1022117534771",
+    "firebase_url": "https://dorlion-b7d53.firebaseio.com",
+    "project_id": "dorlion-b7d53",
+    "storage_bucket": "dorlion-b7d53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022117534771:android:436372434920c124",
+        "android_client_info": {
+          "package_name": "com.example.mikailoral.myapplication1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022117534771-eqrb4e0adhu6j648alribtlbfc710807.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mikailoral.myapplication1",
+            "certificate_hash": "05e6bf7706763e841333b0e7f0639e0ebf5f1664"
+          }
+        },
+        {
+          "client_id": "1022117534771-s9229qkssgfodoutbq7phnnae6q89ukk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdbJiAAPNPdopUJc5xCBzZWm2DIpOCZvA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022117534771-s9229qkssgfodoutbq7phnnae6q89ukk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
